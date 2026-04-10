@@ -1,0 +1,30 @@
+.root {
+    -fx-font-family: "Segoe UI";
+}
+
+.button {
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 16px;
+}
+
+.button:hover {
+    -fx-opacity: 0.9;
+}
+
+.table-view {
+    -fx-font-size: 13px;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+}
+
+.label {
+    -fx-font-size: 13px;
+}
+
+.text-field, .date-picker {
+    -fx-font-size: 13px;
+}

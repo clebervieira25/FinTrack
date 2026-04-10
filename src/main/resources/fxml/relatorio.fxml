@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.fintrack.controller.RelatorioController">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Relatório Financeiro" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <Separator/>
+
+    <TabPane>
+        <Tab text="Resumo Geral" closable="false">
+            <VBox spacing="15">
+                <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+                <Label text="Distribuição Receitas x Despesas" style="-fx-font-size: 16px;"/>
+                <PieChart fx:id="pieChart" prefHeight="300" prefWidth="500"/>
+            </VBox>
+        </Tab>
+
+        <Tab text="Análise por Categoria" closable="false">
+            <VBox spacing="15">
+                <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+                <Label text="Últimas Transações por Valor" style="-fx-font-size: 16px;"/>
+                <BarChart fx:id="barChart" prefHeight="300" prefWidth="500">
+                    <xAxis><CategoryAxis label="Categoria"/></xAxis>
+                    <yAxis><NumberAxis label="Valor (R$)"/></yAxis>
+                </BarChart>
+            </VBox>
+        </Tab>
+    </TabPane>
+
+    <Separator/>
+
+    <HBox alignment="CENTER_RIGHT">
+        <Button text="Atualizar" onAction="#atualizar"/>
+    </HBox>
+</VBox>

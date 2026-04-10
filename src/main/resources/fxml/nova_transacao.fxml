@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.fintrack.controller.NovaTransacaoController">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Nova Transação" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <Separator/>
+
+    <GridPane hgap="10" vgap="15">
+        <Label text="Descrição:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtDescricao" GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="300"/>
+
+        <Label text="Valor (R$):" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtValor" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Tipo:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <HBox spacing="20" GridPane.rowIndex="2" GridPane.columnIndex="1">
+            <RadioButton fx:id="rbReceita" text="Receita">
+                <toggleGroup>
+                    <ToggleGroup fx:id="tgTipo"/>
+                </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbDespesa" text="Despesa" toggleGroup="$tgTipo"/>
+        </HBox>
+
+        <Label text="Data:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <DatePicker fx:id="dtData" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <Separator/>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Cancelar" onAction="#cancelar"/>
+        <Button text="Salvar" onAction="#salvar" style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+    </HBox>
+</VBox>

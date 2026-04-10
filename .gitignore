@@ -1,0 +1,33 @@
+# Compiled files
+*.class
+target/
+
+# IDE files
+.idea/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+
+# Database
+*.db
+*.db-shm
+*.db-wal
+
+# Logs
+*.log
+
+# Maven
+.mvn/
+mvnw
+mvnw.cmd
+
+# OS files
+Thumbs.db
+desktop.ini
+
+# User-specific files
+.vscode/
+.settings/
+.project
+.classpath
